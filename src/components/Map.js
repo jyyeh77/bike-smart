@@ -1,26 +1,46 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import {StyleSheet, View} from 'react-native';
+import axios from 'axios';
 
 class Map extends Component {
 	constructor () {
 		super();
 		this.state = {
 			region: {
-				latitude: 37.78825,
-				longitude: -122.4324,
-				latitudeDelta: 0.0922,
+				latitude: 40.76,
+				longitude: -73.98,
+				latitudeDelta: 0.09,
 				longitudeDelta: 0.0421,
-			}
+			},
+			markers: []
 		}
 	}
 
 	render () {
 		return (
 			<View style={styles.container}>
-				<MapView region={this.state.region} style={styles.map}/>
+				<MapView region={this.state.region} style={styles.map}>
+					{this.state.markers.map(marker=> (
+						<MapView.Marker
+							coordinate={marker.latlng}
+							key={marker.station_id}
+						  title={marker.name}
+						  description={`Capacity: ${marker.capacity}`}
+						/>
+					))}
+				</MapView>
 			</View>
 		)
+	}
+
+	componentWillMount() {
+		axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_information.json')
+			.then(response=> {
+				console.log(response.data.data.stations);
+				response.data.data.stations.map(station=>station.latlng={latitude: station.lat, longitude: station.lon});
+				this.setState({markers: response.data.data.stations});
+			})
 	}
 }
 
