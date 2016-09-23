@@ -9,7 +9,7 @@ export default class Footer extends Component {
 
 	render() {
 		return (
-			<View style={styles.viewStyle}>
+			<View>
 				<Button onPress={()=>console.log('test')}>
 					Start
 				</Button>
@@ -20,19 +20,3 @@ export default class Footer extends Component {
 		)
 	}
 }
-
-const styles = {
-	textStyle: {
-		fontSize: 20
-	},
-	viewStyle: {
-		justifyContent: 'space-around',
-		position: 'absolute',
-		top: 600,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		backgroundColor: '#FFF'
-	}
-};
-

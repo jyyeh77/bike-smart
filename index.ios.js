@@ -19,8 +19,8 @@ class BikeSmart extends Component {
 		return (
 			<View style={{flex: 1}}>
 				<Header headerText={'BikeSmart™'} style={{flex: 1}}/>
-				<Map/>
-				<Footer/>
+				<Map style={{flex: 1}}/>
+				<Footer style={{flex: 1}}/>
 			</View>
 		)
 	}
