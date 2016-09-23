@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Alert} from 'react-native';
 import axios from 'axios';
 
 class Map extends Component {
@@ -27,11 +27,21 @@ class Map extends Component {
 							key={marker.station_id}
 						  title={marker.name}
 						  description={`Capacity: ${marker.capacity}`}
+						  onSelect={()=>this._onSelect(marker)}
 						/>
 					))}
 				</MapView>
 			</View>
 		)
+	}
+
+	_onSelect(marker) {
+		return axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_status.json')
+			.then(response=>{
+				const bikesAvailable = response.data.data.stations.filter(station=>station.station_id===marker.station_id)[0].num_bikes_available;
+				const docksAvailable = response.data.data.stations.filter(station=>station.station_id===marker.station_id)[0].num_docks_available;
+				Alert.alert(`At ${marker.name}, there are:`, `${bikesAvailable} bike(s) available, and \n ${docksAvailable} dock(s) available`);
+			})
 	}
 
 	componentWillMount() {
