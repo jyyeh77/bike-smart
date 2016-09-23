@@ -37,9 +37,9 @@ class Map extends Component {
 	componentWillMount() {
 		axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_information.json')
 			.then(response=> {
-				console.log(response.data.data.stations);
 				response.data.data.stations.map(station=>station.latlng={latitude: station.lat, longitude: station.lon});
-				this.setState({markers: response.data.data.stations});
+				const stations = response.data.data.stations.filter(station=>station.name.indexOf('Coming Soon')<0);
+				this.setState({markers: stations});
 			})
 	}
 }
@@ -47,7 +47,7 @@ class Map extends Component {
 const styles = StyleSheet.create({
 	container: {
 		position: 'absolute',
-		top: 0,
+		top: 60,
 		left: 0,
 		right: 0,
 		bottom: 0,
