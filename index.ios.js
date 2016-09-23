@@ -9,7 +9,6 @@ import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 import Map from './src/components/Map';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
-// import Footer from './src/components/Footer';
 import * as firebase from 'firebase';
 
 const firebaseConfig = require('./env/firebase.json');
@@ -19,7 +18,7 @@ class BikeSmart extends Component {
 	render () {
 		return (
 			<View style={{flex: 1}}>
-				<Header headerText={'BikeSmart™'}/>
+				<Header headerText={'BikeSmart™'} style={{flex: 1}}/>
 				<Map/>
 				<Footer/>
 			</View>

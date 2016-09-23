@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
-import {StyleSheet, View, Alert} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import axios from 'axios';
+import Marker from './Marker';
+
 
 class Map extends Component {
 	constructor () {
@@ -13,7 +15,7 @@ class Map extends Component {
 				latitudeDelta: 0.09,
 				longitudeDelta: 0.0421,
 			},
-			markers: []
+			stations: []
 		}
 	}
 
@@ -21,27 +23,12 @@ class Map extends Component {
 		return (
 			<View style={styles.container}>
 				<MapView region={this.state.region} style={styles.map}>
-					{this.state.markers.map(marker=> (
-						<MapView.Marker
-							coordinate={marker.latlng}
-							key={marker.station_id}
-						  title={marker.name}
-						  description={`Capacity: ${marker.capacity}`}
-						  onSelect={()=>this._onSelect(marker)}
-						/>
+					{this.state.stations.map(station=> (
+						<Marker stationInfo={station} key={station.station_id}/>
 					))}
 				</MapView>
 			</View>
 		)
-	}
-
-	_onSelect(marker) {
-		return axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_status.json')
-			.then(response=>{
-				const bikesAvailable = response.data.data.stations.filter(station=>station.station_id===marker.station_id)[0].num_bikes_available;
-				const docksAvailable = response.data.data.stations.filter(station=>station.station_id===marker.station_id)[0].num_docks_available;
-				Alert.alert(`At ${marker.name}, there are:`, `${bikesAvailable} bike(s) available, and \n ${docksAvailable} dock(s) available`);
-			})
 	}
 
 	componentWillMount() {
@@ -49,7 +36,7 @@ class Map extends Component {
 			.then(response=> {
 				response.data.data.stations.map(station=>station.latlng={latitude: station.lat, longitude: station.lon});
 				const stations = response.data.data.stations.filter(station=>station.name.indexOf('Coming Soon')<0);
-				this.setState({markers: stations});
+				this.setState({stations: stations});
 			})
 	}
 }
