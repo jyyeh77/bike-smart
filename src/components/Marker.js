@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import {Text, StyleSheet} from 'react-native';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 
-export default class Marker extends Component {
+class Marker extends Component {
 	constructor (props) {
 		super(props);
 		this.pinColors = {
@@ -15,12 +17,14 @@ export default class Marker extends Component {
 	}
 
 	render () {
+		const {station} = this.props;
+		const {latlng, name, capacity} = station;
 		return (
 			<MapView.Marker
-				coordinate={this.props.stationInfo.latlng}
-				title={this.props.stationInfo.name}
-				description={`Capacity: ${this.props.stationInfo.capacity}`}
-				onSelect={() => this.onSelect(this.props.stationInfo)}
+				coordinate={latlng}
+				title={name}
+				description={`Capacity: ${capacity}`}
+				onSelect={() => this.onSelect(station)}
 				pinColor={this.state.pinColor}
 			>
 				<MapView.Callout style={styles.plainView}>
@@ -31,13 +35,21 @@ export default class Marker extends Component {
 	}
 
 	onSelect (station) {
-		(this.props.startLocked) ? this.props.setEnd(station) : this.props.setStart(station);
+		if (this.props.startLocked) {
+			if(!this.props.endLocked){
+				this.props.selectEnd(station);
+				this.setState({pinColor: this.pinColors.end});
+			}
+		} else {
+			this.props.selectStart(station);
+			this.setState({pinColor: this.pinColors.start});
+		}
 		axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_status.json')
 			.then(response => {
 				const bikesAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_bikes_available;
 				const docksAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_docks_available;
-				(this.props.startLocked) ?  this.setState({bikes: bikesAvailable, docks: docksAvailable, pinColor: this.pinColors.end}) : this.setState({bikes: bikesAvailable, docks: docksAvailable, pinColor: this.pinColors.start});
-				this.setState({calloutText: `At ${this.props.stationInfo.name}, there are ${this.state.bikes} bikes and ${this.state.docks} docks available`});
+				this.setState({bikes: bikesAvailable, docks: docksAvailable});
+				this.setState({calloutText: `At ${this.props.station.name}, there are ${this.state.bikes} bikes and ${this.state.docks} docks available`});
 			})
 	}
 }
@@ -48,3 +60,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	}
 });
+
+const mapStateToProps = (state, ownProps) => {
+	let isStartStation, isEndStation;
+	if(state.startStation)
+		isStartStation = state.startStation.id === ownProps.station.id;
+	if(state.endStation)
+		isEndStation = state.endStation.id === ownProps.station.id;
+	return {isStartStation, isEndStation, startLocked: state.startLocked, endLocked: state.endLocked};
+};
+
+export default connect(mapStateToProps, actions)(Marker);
