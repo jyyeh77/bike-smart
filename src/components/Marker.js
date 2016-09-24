@@ -6,7 +6,12 @@ import axios from 'axios';
 export default class Marker extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {pinColor: 'grey'};
+		this.pinColors = {
+			default: 'grey',
+			start: 'blue',
+			end: 'red'
+		};
+		this.state = {pinColor: this.pinColors.default};
 	}
 
 	render () {
@@ -30,7 +35,7 @@ export default class Marker extends Component {
 			.then(response => {
 				const bikesAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_bikes_available;
 				const docksAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_docks_available;
-				this.setState({bikes: bikesAvailable, docks: docksAvailable, pinColor: 'blue'});
+				this.setState({bikes: bikesAvailable, docks: docksAvailable, pinColor: this.pinColors.start});
 			})
 	}
 }
