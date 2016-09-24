@@ -19,8 +19,7 @@ class Map extends Component {
 			<View style={styles.container}>
 				<MapView region={region} style={styles.map}>
 					{stations.map(station => (
-						<Marker station={station} key={station.station_id} setStart={this.props.setStart}
-						        setEnd={this.props.setEnd} startLocked={this.props.startLocked} endLocked={this.props.endLocked}/>
+						<Marker station={station} key={station.id}/>
 					))}
 				</MapView>
 			</View>
