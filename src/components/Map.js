@@ -4,10 +4,9 @@ import {StyleSheet, View} from 'react-native';
 import axios from 'axios';
 import Marker from './Marker';
 
-
 class Map extends Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state = {
 			region: {
 				latitude: 40.76,
@@ -24,7 +23,7 @@ class Map extends Component {
 			<View style={styles.container}>
 				<MapView region={this.state.region} style={styles.map}>
 					{this.state.stations.map(station=> (
-						<Marker stationInfo={station} key={station.station_id}/>
+						<Marker stationInfo={station} key={station.station_id} setStart={this.props.setStart} setEnd={this.props.setEnd} startLocked={this.props.startLocked} endLocked={this.props.endLocked}/>
 					))}
 				</MapView>
 			</View>

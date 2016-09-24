@@ -10,11 +10,11 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<View>
-				<Button onPress={()=>console.log('test')}>
-					Start
+				<Button onPress={()=>this.props.lockStart()}>
+					{this.props.stations.startStation.name}
 				</Button>
-				<Button onPress={()=>console.log('test')}>
-					End
+				<Button onPress={()=>this.props.unlockStart()}>
+					{this.props.stations.endStation.name}
 				</Button>
 			</View>
 		)
