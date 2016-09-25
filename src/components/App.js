@@ -3,6 +3,7 @@ import ContentView from './ContentView';
 import Menu from './Menu';
 import {View, Image, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
+import SidebarToggleButton from './SidebarToggleButton';
 
 export default class App extends Component {
 	constructor () {
@@ -35,9 +36,10 @@ export default class App extends Component {
 
 		return (
 			<SideMenu menu={menu} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenuState(isOpen)}>
-				<View style={{flex: 1}}>
-					<ContentView/>
-				</View>
+				<ContentView/>
+				<SidebarToggleButton onPress={() => this.toggle()}>
+					<Image source={require('../assets/menu.png')} style={{width: 32, height: 32}}/>
+				</SidebarToggleButton>
 			</SideMenu>
 		)
 	}
