@@ -8,7 +8,7 @@ const {
 	Text,
 } = require('react-native');
 const { Component } = React;
-
+import {SimpleChart} from './Chart';
 const window = Dimensions.get('window');
 const uri = 'http://pickaface.net/includes/themes/clean/img/slide2.png';
 
