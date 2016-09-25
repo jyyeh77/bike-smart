@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Chart from 'react-native-chart';
-import * as firebase from 'firebase';
-const firebaseConfig = require('../../env/firebase.json');
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-import { connect } from 'react-redux';
+// import * as firebase from 'firebase';
+// const firebaseConfig = require('../../env/firebase.json');
+// const firebaseApp = firebase.initializeApp(firebaseConfig);
+// import { connect } from 'react-redux';
 
 const styles = StyleSheet.create({
 	container: {

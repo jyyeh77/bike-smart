@@ -39,3 +39,10 @@ export const unlockEnd = () => {
 		payload: false
 	}
 };
+
+export const sendData = (stations) => {
+	return {
+		type: 'send_stationData',
+		payload: stations
+	}
+}

@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,13 +22,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		3D731FB4F32A492795066C29 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117687028F945D1BF2DF28D /* libAirMaps.a */; };
-		4AA067DA79C917AF3766B792 /* Pods_BikeSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748576C811D7A9AE90694544 /* Pods_BikeSmart.framework */; };
-		70B983081D95A12F00EB62E0 /* AirMaps in Resources */ = {isa = PBXBuildFile; fileRef = 70B983071D95A12F00EB62E0 /* AirMaps */; };
-		70B983091D95A12F00EB62E0 /* AirMaps in Resources */ = {isa = PBXBuildFile; fileRef = 70B983071D95A12F00EB62E0 /* AirMaps */; };
-		70BD44391D97663D003892ED /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BD442E1D9765D2003892ED /* libART.a */; };
+		27E22D151D9852F900CEFB86 /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 270481D11D984E5E009D574E /* libART.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		5701B29F89534DB88C744DD3 /* libRNChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F818CBDCE1B45BDB09056AB /* libRNChart.a */; };
+		8F47914B6F3083153C8811AB /* Pods_BikeSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0695B91E79A340C650A8C /* Pods_BikeSmart.framework */; };
+		C60412F3CBC847879F518710 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB4C37739284A62B1770AF7 /* libAirMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,19 +92,19 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-		70B983211D95A17800EB62E0 /* PBXContainerItemProxy */ = {
+		270481D01D984E5E009D574E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 44B595B137A943F0B58A5735 /* AirMaps.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
-			remoteInfo = AirMaps;
-		};
-		70BD442D1D9765D2003892ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 70BD44281D9765D2003892ED /* ART.xcodeproj */;
+			containerPortal = 270481CC1D984E5E009D574E /* ART.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
 			remoteInfo = ART;
+		};
+		270481F51D984E8B009D574E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87C1C0D1EC244EFB92554CCB /* AirMaps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -134,7 +132,6 @@
 		00E356EE1AD99517003FC87E /* BikeSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BikeSmartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeSmartTests.m; sourceTree = "<group>"; };
-		0117687028F945D1BF2DF28D /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BikeSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,16 +142,14 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BikeSmart/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BikeSmart/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		44B595B137A943F0B58A5735 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
-		50EC02D536B4C4918D626CB7 /* Pods-BikeSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.debug.xcconfig"; sourceTree = "<group>"; };
-		5EB235194FFADF64F8BB850A /* Pods-BikeSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.release.xcconfig"; sourceTree = "<group>"; };
-		70B983071D95A12F00EB62E0 /* AirMaps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AirMaps; path = "../node_modules/react-native-maps/ios/AirMaps"; sourceTree = "<group>"; };
-		70BD44281D9765D2003892ED /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
-		748576C811D7A9AE90694544 /* Pods_BikeSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270481CC1D984E5E009D574E /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
+		37B0695B91E79A340C650A8C /* Pods_BikeSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB4C37739284A62B1770AF7 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		9659CB3F26404D07891507F1 /* RNChart.xcodeproj */ = {isa = PBXFileReference; name = "RNChart.xcodeproj"; path = "../node_modules/react-native-chart/RNChart.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		3F818CBDCE1B45BDB09056AB /* libRNChart.a */ = {isa = PBXFileReference; name = "libRNChart.a"; path = "libRNChart.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		87C1C0D1EC244EFB92554CCB /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
+		E0492E63FA2AFA3FC3CAE8E7 /* Pods-BikeSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.release.xcconfig"; sourceTree = "<group>"; };
+		F1AEC6EA10E18F4682747DD6 /* Pods-BikeSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70BD44391D97663D003892ED /* libART.a in Frameworks */,
+				27E22D151D9852F900CEFB86 /* libART.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -181,9 +176,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				4AA067DA79C917AF3766B792 /* Pods_BikeSmart.framework in Frameworks */,
-				3D731FB4F32A492795066C29 /* libAirMaps.a in Frameworks */,
-				5701B29F89534DB88C744DD3 /* libRNChart.a in Frameworks */,
+				8F47914B6F3083153C8811AB /* Pods_BikeSmart.framework in Frameworks */,
+				C60412F3CBC847879F518710 /* libAirMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,27 +279,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		443D0B589670A4ABC10E9CE6 /* Pods */ = {
+		270481CD1D984E5E009D574E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50EC02D536B4C4918D626CB7 /* Pods-BikeSmart.debug.xcconfig */,
-				5EB235194FFADF64F8BB850A /* Pods-BikeSmart.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		70B9831E1D95A17800EB62E0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				70B983221D95A17800EB62E0 /* libAirMaps.a */,
+				270481D11D984E5E009D574E /* libART.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		70BD44291D9765D2003892ED /* Products */ = {
+		270481F21D984E8B009D574E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70BD442E1D9765D2003892ED /* libART.a */,
+				270481F61D984E8B009D574E /* libAirMaps.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,8 +306,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				70BD44281D9765D2003892ED /* ART.xcodeproj */,
-				70B983071D95A12F00EB62E0 /* AirMaps */,
+				270481CC1D984E5E009D574E /* ART.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -333,8 +317,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				44B595B137A943F0B58A5735 /* AirMaps.xcodeproj */,
-				9659CB3F26404D07891507F1 /* RNChart.xcodeproj */,
+				87C1C0D1EC244EFB92554CCB /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -354,8 +337,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BikeSmartTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				443D0B589670A4ABC10E9CE6 /* Pods */,
-				ECF639B5304FE54B1A88E22B /* Frameworks */,
+				90C2FF9FE18E30493328827F /* Pods */,
+				CF6B427C7946722C3F3AC3D4 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -370,10 +353,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ECF639B5304FE54B1A88E22B /* Frameworks */ = {
+		90C2FF9FE18E30493328827F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				748576C811D7A9AE90694544 /* Pods_BikeSmart.framework */,
+				F1AEC6EA10E18F4682747DD6 /* Pods-BikeSmart.debug.xcconfig */,
+				E0492E63FA2AFA3FC3CAE8E7 /* Pods-BikeSmart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF6B427C7946722C3F3AC3D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B0695B91E79A340C650A8C /* Pods_BikeSmart.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -403,13 +395,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BikeSmart" */;
 			buildPhases = (
-				BC9D114C179560B987C701C4 /* [CP] Check Pods Manifest.lock */,
+				FA55044B9E159DA73F9275A5 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				9C1E97978A4B31CD445745F4 /* [CP] Embed Pods Frameworks */,
-				50D022D15EBA28F107C2D2AF /* [CP] Copy Pods Resources */,
+				A681565B48D2DB5545EFF369 /* [CP] Embed Pods Frameworks */,
+				7E45362C6C47F8D88617ED22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,7 +418,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -448,12 +440,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 70B9831E1D95A17800EB62E0 /* Products */;
-					ProjectRef = 44B595B137A943F0B58A5735 /* AirMaps.xcodeproj */;
+					ProductGroup = 270481F21D984E8B009D574E /* Products */;
+					ProjectRef = 87C1C0D1EC244EFB92554CCB /* AirMaps.xcodeproj */;
 				},
 				{
-					ProductGroup = 70BD44291D9765D2003892ED /* Products */;
-					ProjectRef = 70BD44281D9765D2003892ED /* ART.xcodeproj */;
+					ProductGroup = 270481CD1D984E5E009D574E /* Products */;
+					ProjectRef = 270481CC1D984E5E009D574E /* ART.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -561,18 +553,18 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		70B983221D95A17800EB62E0 /* libAirMaps.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAirMaps.a;
-			remoteRef = 70B983211D95A17800EB62E0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		70BD442E1D9765D2003892ED /* libART.a */ = {
+		270481D11D984E5E009D574E /* libART.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libART.a;
-			remoteRef = 70BD442D1D9765D2003892ED /* PBXContainerItemProxy */;
+			remoteRef = 270481D01D984E5E009D574E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		270481F61D984E8B009D574E /* libAirMaps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAirMaps.a;
+			remoteRef = 270481F51D984E8B009D574E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
@@ -596,7 +588,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B983091D95A12F00EB62E0 /* AirMaps in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +595,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B983081D95A12F00EB62E0 /* AirMaps in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -627,7 +617,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
-		50D022D15EBA28F107C2D2AF /* [CP] Copy Pods Resources */ = {
+		7E45362C6C47F8D88617ED22 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -642,7 +632,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C1E97978A4B31CD445745F4 /* [CP] Embed Pods Frameworks */ = {
+		A681565B48D2DB5545EFF369 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -657,7 +647,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC9D114C179560B987C701C4 /* [CP] Check Pods Manifest.lock */ = {
+		FA55044B9E159DA73F9275A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -729,8 +719,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeSmart.app/BikeSmart";
 			};
@@ -747,8 +737,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeSmart.app/BikeSmart";
 			};
@@ -756,7 +746,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50EC02D536B4C4918D626CB7 /* Pods-BikeSmart.debug.xcconfig */;
+			baseConfigurationReference = F1AEC6EA10E18F4682747DD6 /* Pods-BikeSmart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -766,7 +756,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
-					"$(SRCROOT)/../node_modules/react-native-chart",
 				);
 				INFOPLIST_FILE = BikeSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -775,6 +764,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BikeSmart;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -782,7 +772,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EB235194FFADF64F8BB850A /* Pods-BikeSmart.release.xcconfig */;
+			baseConfigurationReference = E0492E63FA2AFA3FC3CAE8E7 /* Pods-BikeSmart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -791,7 +781,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
-					"$(SRCROOT)/../node_modules/react-native-chart",
 				);
 				INFOPLIST_FILE = BikeSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -800,6 +789,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BikeSmart;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -818,15 +808,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -844,7 +838,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
-					"$(SRCROOT)/../node_modules/react-native-chart",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -866,8 +859,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -875,6 +870,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -886,7 +882,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
-					"$(SRCROOT)/../node_modules/react-native-chart",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;

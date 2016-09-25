@@ -3,8 +3,21 @@ import MapView from 'react-native-maps';
 import {StyleSheet, View} from 'react-native';
 import Marker from './Marker';
 import {connect} from 'react-redux';
+import * as firebase from 'firebase';
+const firebaseConfig = require('../../env/firebase.json');
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class Map extends Component {
+
+	componentDidMount () {
+		this.dataBae = firebaseApp.database();
+		this.dataBae.ref().once('value')
+			.then(snapshot => {
+				console.log("GOT DATA: ", snapshot.val());
+				this.props.stationData = snapshot.val();
+			})
+	}
+
 	render () {
 		const {stations} = this.props;
 		const region = {
