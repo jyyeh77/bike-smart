@@ -1,17 +1,7 @@
-const React = require('react');
-const {
-	Dimensions,
-	StyleSheet,
-	ScrollView,
-	View,
-	Image,
-	Text,
-} = require('react-native');
-const { Component } = React;
-import {SimpleChart} from './Chart';
+import React, { Component } from 'react';
+import { Dimensions, StyleSheet, ScrollView, View, Image, Text} from 'react-native';
+import SimpleChart from './Chart';
 const window = Dimensions.get('window');
-const uri = 'http://pickaface.net/includes/themes/clean/img/slide2.png';
-
 const styles = StyleSheet.create({
 	menu: {
 		flex: 1,
@@ -42,33 +32,13 @@ const styles = StyleSheet.create({
 	},
 });
 
-module.exports = class Menu extends Component {
-	static propTypes = {
-		onItemSelected: React.PropTypes.func.isRequired,
-	};
-
-	render() {
+export default class Menu extends Component {
+	render () {
 		return (
-			<ScrollView scrollsToTop={false} style={styles.menu}>
-				<View style={styles.avatarContainer}>
-					<Image
-						style={styles.avatar}
-						source={{ uri, }}/>
-					<Text style={styles.name}>Your name</Text>
-				</View>
-
-				<Text
-					onPress={() => this.props.onItemSelected('About')}
-					style={styles.item}>
-					About
-				</Text>
-
-				<Text
-					onPress={() => this.props.onItemSelected('Contacts')}
-					style={styles.item}>
-					Contacts
-				</Text>
-			</ScrollView>
+			<View style={{flex: 1}}>
+				<SimpleChart />
+			</View>
 		);
 	}
-};
+}
+

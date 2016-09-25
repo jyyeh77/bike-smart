@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import {StyleSheet, View} from 'react-native';
-import axios from 'axios';
 import Marker from './Marker';
 import {connect} from 'react-redux';
 
