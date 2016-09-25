@@ -11,8 +11,6 @@ import App from './src/components/App';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import reducers from './src/reducers';
-
-
 const firebaseConfig = require('./env/firebase.json');
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
