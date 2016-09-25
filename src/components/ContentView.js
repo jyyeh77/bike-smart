@@ -7,7 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 import reducers from '../reducers';
 
-export default class Main extends Component {
+export default class ContentView extends Component {
 	render () {
 		return (
 		<Provider store={createStore(reducers)}>
