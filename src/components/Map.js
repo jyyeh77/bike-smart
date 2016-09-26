@@ -4,21 +4,11 @@ import {StyleSheet, View} from 'react-native';
 import Marker from './Marker';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-// import * as firebase from 'firebase';
-// const firebaseConfig = require('../../env/firebase.json');
-// const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class Map extends Component {
-	// gets station data from firebase, sends all info to stationData
-	// reducer using sendData action
+	// gets station data from firebase using async actionCreator
 	componentDidMount () {
 		this.props.fetchStations();
-		// this.dataBae = firebaseApp.database();
-		// this.dataBae.ref().once('value')
-		// 	.then(snapshot => {
-		// 		console.log("SENDING DATA TO REDUCER!");
-		// 		this.props.sendData(snapshot.val());
-		// 	})
 	}
 
 	render () {
