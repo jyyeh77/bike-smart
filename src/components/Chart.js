@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import Chart from 'react-native-chart';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-//do this but better to the snapshot
+//do this but better to the snapshot, use for station, day queries
 function doForIn (data) {
 	let result = [];
 	for (let key in data) {
@@ -39,20 +39,23 @@ function doForIn (data) {
 class SimpleChart extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {bikesData: [[0, 1], [1, 3], [3, 7], [4, 9]]};
+		this.state = {bikesData: [[0, 1], [1, 3], [3, 7], [4, 9]], station: 'No Station Selected'};
 	}
 
 	componentWillReceiveProps(nextProps){
-		if (this.props !== nextProps) {
-			console.log("CALLING!");
-			console.log(nextProps);
-
+		if (nextProps.startStation) {
+			// console.log("CALLING!");
+			const { startStation, allStations } = nextProps;
+			// console.log(doForIn(allStations[startStation.id]['Monday']))
+			this.setState({bikesData: doForIn(allStations[startStation.id]['Monday']),
+				station: startStation.name})
 		}
 	}
 
 	render () {
 		return (
 			<View style={styles.container}>
+				<Text>{this.state.station}</Text>
 				<Chart
 					style={styles.chart}
 					data={this.state.bikesData}
