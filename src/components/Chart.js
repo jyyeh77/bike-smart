@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Chart from 'react-native-chart';
-// import * as firebase from 'firebase';
-// const firebaseConfig = require('../../env/firebase.json');
-// const firebaseApp = firebase.initializeApp(firebaseConfig);
-// import { connect } from 'react-redux';
-
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -39,10 +36,18 @@ function doForIn (data) {
 // }
 
 
-export default class SimpleChart extends Component {
+class SimpleChart extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {bikesData: [[0, 1], [1, 3], [3, 7], [4, 9]]};
+	}
+
+	componentWillReceiveProps(nextProps){
+		if (this.props !== nextProps) {
+			console.log("CALLING!");
+			console.log(nextProps);
+
+		}
 	}
 
 	render () {
@@ -59,3 +64,19 @@ export default class SimpleChart extends Component {
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	let startStation, allStations;
+	return {startStation: state.startStation, allStations: state.stationData};
+}
+//
+export default connect(mapStateToProps, actions)(SimpleChart);
+
+// let self = this;
+// this.dataBae = firebaseApp.database();
+// this.dataBae.ref().once('value')
+// 	.then(snap => {
+// 		self.setState({bikesData: [[5, 0], [5,0], [5, 0], [5, 0]]})
+// 	})
+
+

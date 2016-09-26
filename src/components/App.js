@@ -5,6 +5,7 @@ import {View, Image, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import SidebarToggleButton from './SidebarToggleButton';
 
+
 export default class App extends Component {
 	constructor () {
 		super();
@@ -44,3 +45,7 @@ export default class App extends Component {
 		)
 	}
 }
+
+
+
+
