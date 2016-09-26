@@ -27,16 +27,16 @@ function doForIn (data) {
 	return result;
 }
 
-export default class SimpleChart extends Component {
+class SimpleChart extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {bikesData: [[0, 1], [1, 3], [3, 7], [4, 9]],
-			title: ''};
+		this.state = {data: [[0, 1], [1, 3], [3, 7], [4, 9]],
+			title: 'Data Unavailable'};
 	}
 
 	componentWillReceiveProps(nextProps) {
 		if (this.props.title !== nextProps.title) {
-			this.setState({title: nextProps.title.name})
+			this.setState({title: nextProps.title.name, data: nextProps.data})
 		}
 	}
 
@@ -64,7 +64,7 @@ export default class SimpleChart extends Component {
 				<Text>{this.state.title}</Text>
 				<Chart
 					style={styles.chart}
-					data={this.state.bikesData}
+					data={this.state.data}
 					verticalGridStep={6}
 					showXAxisLabels={true}
 					showYAxisLabels={true}
@@ -77,15 +77,15 @@ export default class SimpleChart extends Component {
 	}
 }
 
-// const mapStateToProps = state => {
-// 	let startStation, endStation, allStations;
-// 	return {startStation: state.startStation,
-// 					endStation: state.endStation,
-// 					allStations: state.stationData
-// 	};
-// }
-// //
-// export default connect(mapStateToProps, actions)(SimpleChart);
+const mapStateToProps = state => {
+	let startStation, endStation, allStations;
+	return {startStation: state.startStation,
+					endStation: state.endStation,
+					allStations: state.stationData
+	};
+}
+//
+export default connect(mapStateToProps, actions)(SimpleChart);
 
 // let self = this;
 // this.dataBae = firebaseApp.database();
