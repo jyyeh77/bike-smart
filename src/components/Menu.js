@@ -38,7 +38,7 @@ class Menu extends Component {
 		return (
 			<View style={{flex: 1, top: 20}}>
 				<SimpleChart title={this.state.start} />
-				<SimpleChart />
+				<SimpleChart title={this.state.end} />
 			</View>
 		);
 	}
