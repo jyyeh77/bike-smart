@@ -69,7 +69,9 @@ class Menu extends Component {
 	render() {
 		return (
 			<View style={{flex: 1, top: 20}}>
+				<Text style={{color: 'blue', textAlign: 'center'}}>Bike Profile Last {moment().format('dddd')}</Text>
 				<SimpleChart title={this.state.start} data={this.state.bikes}/>
+				<Text style={{color: 'blue', textAlign: 'center'}}>Dock Profile Last {moment().format('dddd')}</Text>
 				<SimpleChart title={this.state.end} data={this.state.docks}/>
 			</View>
 		);

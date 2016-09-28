@@ -30,8 +30,8 @@ function doForIn (data) {
 class SimpleChart extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {data: [[0, 1], [1, 3], [3, 7], [4, 9]],
-			title: 'Data Unavailable'};
+		this.state = {data: [[0, 0], [0,0], [0,0], [0,0]],
+			title: 'Select Station to View History'};
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -39,24 +39,6 @@ class SimpleChart extends Component {
 			this.setState({title: nextProps.title.name, data: nextProps.data})
 		}
 	}
-
-	// componentWillReceiveProps(nextProps){
-	// 	if (nextProps.startStation) {
-	// 		const { startStation, allStations } = nextProps;
-	// 		var now = moment().format('dddd');
-	// 		if (allStations[startStation.id][now]) {
-	// 			this.setState({bikesData: doForIn(allStations[startStation.id][now]),
-	// 				start: startStation.name})
-	// 		}
-	// 	}
-	// 	if (nextProps.endStation) {
-	// 		const { endStation, allStations } = nextProps;
-	// 		var now = moment().format('dddd');
-	// 		if (allStations[endStation.id][now]) {
-	// 			this.setState({end: endStation.name});
-	// 		}
-	// 	}
-	// }
 
 	render () {
 		return (
@@ -87,20 +69,6 @@ const mapStateToProps = state => {
 //
 export default connect(mapStateToProps, actions)(SimpleChart);
 
-// let self = this;
-// this.dataBae = firebaseApp.database();
-// this.dataBae.ref().once('value')
-// 	.then(snap => {
-// 		self.setState({bikesData: [[5, 0], [5,0], [5, 0], [5, 0]]})
-// 	})
 
-//this does a query
-// this.dataBae = firebaseApp.database();
-// if (this.props.station) {
-// 	this.dataBae.ref(/someSationId/someDay).once('value')
-// 		.then(snapshot => {
-// 			this.setState({bikesData: doForIn(snapshot.val())})
-// 		});
-// }
 
 
