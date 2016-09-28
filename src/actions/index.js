@@ -1,3 +1,7 @@
+import * as firebase from 'firebase';
+const firebaseConfig = require('../../env/firebase.json');
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 export const selectStart = (station) => {
 	return {
 		type: 'set_startStation',
@@ -39,3 +43,24 @@ export const unlockEnd = () => {
 		payload: false
 	}
 };
+
+export const sendStations = (bikeStations) => {
+	return {
+		type: 'get_StationData',
+		payload: bikeStations
+	}
+}
+
+
+export function fetchStations () {
+	return function(dispatch) {
+		return getData()
+			.then(snapshot => {
+				dispatch(sendStations(snapshot.val()))
+			})
+	}
+}
+
+function getData () {
+	return firebaseApp.database().ref().once('value');
+}

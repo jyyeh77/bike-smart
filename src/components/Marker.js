@@ -46,9 +46,8 @@ class Marker extends Component {
 		}
 		axios.get('https://gbfs.citibikenyc.com/gbfs/en/station_status.json')
 			.then(response => {
-				const bikesAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_bikes_available;
-				const docksAvailable = response.data.data.stations.filter(station => station.station_id === station.station_id)[0].num_docks_available;
-				this.setState({bikes: bikesAvailable, docks: docksAvailable});
+				const { num_bikes_available, num_docks_available } = response.data.data.stations.filter(station => station.station_id === station.station_id)[0];
+				this.setState({bikes: num_bikes_available, docks: num_docks_available});
 				this.setState({calloutText: `At ${this.props.station.name}, there are ${this.state.bikes} bikes and ${this.state.docks} docks available`});
 			})
 	}
