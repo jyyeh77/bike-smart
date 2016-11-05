@@ -18,7 +18,7 @@ out around 8:30 AM, Bike-Smart allows them access this information ahead of time
  <img align='left' src='./screenshots/map-overview.png'/ width='300'>
  
  Every Citi-bike station is displayed via markers on Apple Maps. 
- 
+ <br>
  <img src='./screenshots/zoomin.png'/ width='250'>
  <img src='./screenshots/start.png'/ width='250'>
  <img src='./screenshots/end.png'/ width='250'>
