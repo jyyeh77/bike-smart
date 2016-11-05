@@ -34,7 +34,19 @@ two scatter plots after locking their start and end preferences:
 
 <img src='./screenshots/graphs.png'/ width='300'>
 
-Top: Display # of bikes at the starting station throughout the day exactly one week ago.
+**Top**: Display # of bikes at the starting station throughout the day exactly one week ago.
 
-Bottom: Display # of stations at the destination throughout the day exactly one week ago.
+**Bottom**: Display # of stations at the destination throughout the day exactly one week ago.
+
+### Technologies Used
+
+React Native
+Redux
+Firebase
+
+### Contributors: 
+
+Chris Miller
+Justin Yeh
+
  
