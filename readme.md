@@ -20,13 +20,21 @@ out around 8:30 AM, Bike-Smart allows them access this information ahead of time
  <img src='./screenshots/map-overview.png'/ width='300'>
 
  Every Citi-bike station is displayed via markers on Apple Maps. 
+ Users can zoom in by simply tapping the map.
 
-
- <img style='padding: 10px;' src='./screenshots/zoomin.png'/ width='250'>
- <img style='padding: 10px;' src='./screenshots/start.png'/ width='250'>
+#### Selecting Stations
+ <img src='./screenshots/zoomin.png'/ width='250'>
+ <img src='./screenshots/start.png'/ width='250'>
  <img src='./screenshots/end.png'/ width='250'>
-
  
+#### Predicting Station Usages
 
-<!--![alt text](./screenshots/map-overview.png)-->
+By pressing the hamburger menu on the top-left corner, users can access
+two scatter plots:
 
+<img src='./screenshots/graphs.png'/ width='300'>
+
+Top: Display # of bikes at the starting station throughout the day exactly one week ago.
+
+Bottom: Display # of stations at the destination throughout the day exactly one week ago.
+ 
