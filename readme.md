@@ -13,7 +13,7 @@ out around 8:30 AM, Bike-Smart allows them access this information ahead of time
 ## Features
 
 ### Replicating the official Citi-bike application
- <img src='./screenshots/map-overview.png'/ width='100'>
+ <img src='./screenshots/map-overview.png'/ width='300'>
 
    
 
