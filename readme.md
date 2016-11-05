@@ -30,7 +30,7 @@ out around 8:30 AM, Bike-Smart allows them access this information ahead of time
 #### Predicting Station Usages
 
 By pressing the hamburger menu on the top-left corner, users can access
-two scatter plots:
+two scatter plots after locking their start and end preferences:
 
 <img src='./screenshots/graphs.png'/ width='300'>
 
