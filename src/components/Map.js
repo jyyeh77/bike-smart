@@ -22,7 +22,7 @@ class Map extends Component {
 
 		// all stations rendered here
 		return (
-			<View style={styles.container}
+			<View style={styles.container}>
 				<MapView region={region} style={styles.map}>
 					{stations.map(station => (
 						<Marker station={station} key={station.id}/>
